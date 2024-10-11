@@ -1,4 +1,5 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import { ArrowRight, Link } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -15,7 +16,9 @@ export default function Home() {
     <p className="mt-5 max-w-prose text-zinc-700 sm:text-lg">
       Insquire allows you to have conversation with any pdf docuyment. Simply upload your file and start asking questions right away.
     </p>
-    <Link href='/dashboard' target></Link>
+    <Link href='/dashboard' target='_blank'>
+    Get Started <ArrowRight className='ml-2 h-5 w-5' />
+    </Link>
     </MaxWidthWrapper>
   );
 }
