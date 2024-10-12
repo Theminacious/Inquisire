@@ -1,16 +1,18 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button"; // Assuming Button is from ShadCN
-import { ArrowRight, UploadCloud } from "lucide-react";
+import { ArrowRight, UploadCloud, CheckCircle } from "lucide-react"; // Added CheckCircle icon
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="bg-slate-900 text-slate-100 min-h-screen">
+      <div className="bg-slate-850 pt-16 sm:pt-24">
       {/* MaxWidthWrapper with slate theme */}
-      <MaxWidthWrapper className="mb-12 mt-28 sm:mt-40 flex flex-col items-center justify-center text-center bg-slate-800 p-8 rounded-lg shadow-lg">
-        <div className="mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-slate-700 bg-slate-700 px-7 py-2 shadow-md transition-all hover:border-slate-600">
-          <p className="text-sm font-semibold text-slate-300">
+      <MaxWidthWrapper className="mb-12 mt-16 sm:mt-24 flex flex-col items-center justify-center text-center bg-slate-800 p-8 rounded-lg shadow-lg">
+        <div className="mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-blue-500 bg-blue-600 px-7 py-2 shadow-md transition-all hover:border-blue-400">
+          <CheckCircle className="h-5 w-5 text-white" /> {/* CheckCircle Icon */}
+          <p className="text-sm font-semibold text-white">
             Insquire is now publicly available!
           </p>
         </div>
@@ -22,6 +24,7 @@ export default function Home() {
         <p className="mt-5 max-w-prose text-slate-400 sm:text-lg leading-relaxed">
           With Insquire, you can easily interact with any PDF document. Upload your file and start asking questions immediately!
         </p>
+        
 
         <Link href="/dashboard" target="_blank">
           <Button className="mt-6 inline-flex items-center justify-center bg-blue-600 text-white px-6 py-3 text-lg font-semibold shadow-lg hover:bg-blue-500 transition-all transform hover:scale-105">
@@ -29,7 +32,7 @@ export default function Home() {
           </Button>
         </Link>
       </MaxWidthWrapper>
-
+      </div>
       {/* Features Section */}
       <div className="relative isolate">
         <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:top-80">
@@ -41,7 +44,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="mx-auto max-w-6xl px-6 lg:px-8 mt-16 sm:mt-24">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8 mt-10 sm:mt-16">
           <div className="-m-2 rounded-xl bg-slate-800 p-8 ring-1 ring-inset ring-slate-700 lg:-m-4 lg:rounded-2xl lg:p-10">
             <Image
               src="/dashboard-preview.png"
@@ -56,7 +59,7 @@ export default function Home() {
       </div>
 
       {/* Steps Section */}
-      <div className="mx-auto mb-32 mt-32 max-w-5xl sm:mt-56">
+      <div className="mx-auto mb-32 mt-24 max-w-5xl sm:mt-40">
         <div className="mb-12 px-6 lg:px-8">
           <div className="mx-auto max-w-2xl sm:text-center">
             <h2 className="mt-2 font-bold text-4xl text-slate-100 sm:text-5xl">
@@ -104,7 +107,7 @@ export default function Home() {
         </ol>
 
         {/* Upload Document Section */}
-        <div className="relative isolate mx-auto max-w-6xl px-6 lg:px-8 mt-16 sm:mt-24">
+        <div className="relative isolate mx-auto max-w-6xl px-6 lg:px-8 mt-12 sm:mt-20">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:top-80"
